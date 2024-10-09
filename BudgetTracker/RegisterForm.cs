@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using BudgetTracker.DataAccess;
 
 namespace BudgetTracker
 {
 
     public partial class RegisterForm : Form
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\F3\Documents\expense.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(DbBaglanti.connectionString);
 
 
         public RegisterForm()

@@ -1,3 +1,4 @@
+using BudgetTracker.DataAccess;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -6,9 +7,9 @@ namespace BudgetTracker
 {
     public partial class Form1 : Form
     {
-        private readonly string stringConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\F3\Documents\expense.mdf;Integrated Security=True;Connect Timeout=30";
+		private readonly string stringConnection = DbBaglanti.connectionString;
 
-        public Form1()
+		public Form1()
         {
             InitializeComponent();
         }

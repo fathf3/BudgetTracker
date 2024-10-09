@@ -11,14 +11,15 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
 using BudgetTracker.Entities;
+using BudgetTracker.DataAccess;
 
 namespace BudgetTracker
 {
     public partial class ExpensesForm : UserControl
     {
 
-        private readonly string stringConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\F3\Documents\expense.mdf;Integrated Security=True;Connect Timeout=30";
-        public ExpensesForm()
+		private readonly string stringConnection = DbBaglanti.connectionString;
+		public ExpensesForm()
         {
             InitializeComponent();
             displayExpensesList();
